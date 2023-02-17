@@ -15,10 +15,10 @@
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="./001.html">我的網站</a>
+				<a class="navbar-brand" href="./index.php">我的網站</a>
 			</div>
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="./001.html">首頁</a></li>
+				<li class="active"><a href="./index.php">首頁</a></li>
 				<!-- <li><a href="#">留言板</a></li> -->
 			</ul>
 			<form action="../backend/log_out.php" method="POST">
@@ -35,7 +35,7 @@
 	<?php
 	session_start();
 	require_once("../backend/connect_db.php");
-	$sql = 'SELECT * FROM message';
+	$sql = 'SELECT * FROM message ORDER BY message.create_at DESC';
 	$stmt = $db_link->prepare($sql);
 	$stmt->execute();
 	$comments = array();
