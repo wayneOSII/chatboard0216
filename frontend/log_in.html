@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<!-- <b>請登入網站會員</b> -->
+
+<body>
+    <!-- <p>1.設定您的帳號密碼</p>
+    <form action="../backend/log_in.php" method="post">
+        <font color="red">*</font>會員帳號
+        <input name="account" required>
+        <font color="red">*</font>會員密碼
+        <input name="pwd" required>
+        <input type="submit" value="確認送出">
+    </form> -->
+
+    <!-- 頁首 -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="./001.html">我的網站</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="./log_out.php">首頁</a></li>
+				<!-- <li><a href="#">留言板</a></li> -->
+			</ul>
+			<!-- <ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="./002.html">登入</a></li>
+				<li><a href="./003.html">註冊</a></li>
+			</ul> -->
+		</div>
+	</nav>
+	<!-- 登入表單 -->
+	<div class="container">
+		<h1>登入</h1>
+		<form action="../backend/log_in.php" method="post">
+			<div class="form-group">
+				<label for="username">使用者名稱:</label>
+				<input type="text" class="form-control" id="username" name="account" placeholder="輸入使用者名稱">
+			</div>
+			<div class="form-group">
+				<label for="password">密碼:</label>
+				<input type="password" class="form-control" id="password" name="pwd" placeholder="輸入密碼">
+			</div>
+			<button type="submit" class="btn btn-primary">登入</button>
+			<a href="./log_out.php" class="btn btn-default">返回首頁</a>
+		</form>
+	</div>
+</body>
+</html>

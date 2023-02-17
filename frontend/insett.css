@@ -1,0 +1,25 @@
+th{
+    padding: 10px;
+}
+td{
+    width: 620px;
+    height: 45px;
+}
+.chkimg{
+    border: 1px;
+    border-style: solid;
+    margin: 0px 0px 0px 5px;
+    width: 80px;
+}
+.phonearea{
+    width: 40px;
+}
+.phonedis{
+    width: 80px;
+}
+.referacc1{
+    width: 310px;
+}
+.referacc2{
+    width: 360px;
+}

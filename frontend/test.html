@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入頁面</title>
+    <link rel="stylesheet" href="./insett.css">
+</head>
+<body>
+    <form action="../backend/add_user.php" method="post">
+    <p>1.設定您的帳號密碼</p>
+    
+    <table border="1">
+        
+        <tr>
+            <th><font color="red">*</font>會員帳號</th>
+            <td><input name="account" required>  ※此為未來登入用帳號，請務必下正確Email</td>
+          </tr>
+          <tr>
+            <th><font color="red">*</font>密碼</th>
+            <td><input name="pwd" required><br> ※8-20字元，至少包含2個英文與2個數字，不含空白、雙引號、單引號、星號、括號、大於、小於。</td>
+          </tr>
+          
+    </table>
+    
+    <p>2.填寫個人資料</p>
+    <table border="1">
+        <tr>
+            <th><font color="red">*</font>會員姓名</th>
+            <td><input name="membername" required><br>  ※請輸入您的真實姓名，否則無法取得相關活動(ex:贈品...)資格。</td>
+          </tr>
+          <tr>
+            <th><font color="red">*</font>性別</th>
+            <td>
+                <input type="radio" name="sex" value="man" checked>男生
+                <input type="radio" name="sex" value="woman">女生</td>
+          </tr>
+          <tr>
+            <th>會的能力</th>
+            <td>
+                <input type="checkbox" name="skill[]" value="web">網頁開發
+                <input type="checkbox" name="skill[]" value="art">平面設計
+                <input type="checkbox" name="skill[]" value="rd">程式開發</br>
+            </td>
+          </tr>
+          <tr>
+            <th><font color="red">*</font>出生年</th>
+            <td><select name="btdyear" required>
+                <option value="1980" selected>1980</option>
+                <option value="1981">1981</option>
+                <option value="1982">1982</option>
+                <option value="1983">1983</option>
+                <option value="1984">1984</option>
+                <option value="1985">1985</option>
+                <option value="1986">1986</option>
+            </select>年
+            
+          </tr>
+          <tr>
+            <th class="telephone"><font color="red">*</font>連絡電話</th>
+            <td>行動電話<input name="telephone" placeholder="0900000000" required></td>
+          </tr>
+          
+          <tr>
+            <th>訂閱電子報</th>
+            <td>
+                <input type="checkbox" name="subnews"  checked>
+                訂閱電子報
+              </td>
+          </tr>
+    </table>
+    
+    <br>
+    <input type="submit" value="確認送出">
+  </form>
+</body>
+</html>
